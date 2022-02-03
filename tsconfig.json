@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "./lib",
+    "rootDir": ".",
+    "declaration": true,
+    "declarationMap": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": false,
+    "strict": true,
+    "jsx": "react-jsx",
+    "noFallthroughCasesInSwitch": true,
+    "module": "commonjs",
+    "target": "es2019",
+    "lib": ["es2019", "es6", "dom", "dom.iterable"]
+  },
+  "exclude": ["node_modules", "lib"]
+}
