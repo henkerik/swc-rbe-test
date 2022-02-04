@@ -1,1 +1,16 @@
 build --enable_runfiles
+build --host_platform=@buildbuddy_toolchain//:platform
+build --platforms=@buildbuddy_toolchain//:platform
+build --extra_execution_platforms=@buildbuddy_toolchain//:platform
+build --bes_results_url=https://app.buildbuddy.io/invocation/
+build --bes_backend=grpcs://cloud.buildbuddy.io
+build --remote_timeout=3600
+build --remote_executor=grpcs://cloud.buildbuddy.io
+build --crosstool_top=@buildbuddy_toolchain//:toolchain
+build --extra_toolchains=@buildbuddy_toolchain//:cc_toolchain
+build --javabase=@buildbuddy_toolchain//:javabase_jdk8
+build --host_javabase=@buildbuddy_toolchain//:javabase_jdk8
+build --java_toolchain=@buildbuddy_toolchain//:toolchain_jdk8
+build --host_java_toolchain=@buildbuddy_toolchain//:toolchain_jdk8
+build --cpu=k8
+build --host_cpu=k8
